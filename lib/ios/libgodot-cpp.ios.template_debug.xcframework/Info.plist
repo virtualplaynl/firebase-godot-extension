@@ -23,11 +23,11 @@
 		</dict>
 		<dict>
 			<key>BinaryPath</key>
-			<string>libgodot-cpp.ios.template_debug.arm64.a</string>
+			<string>libgodot-cpp.ios.template_debug.universal.a</string>
 			<key>LibraryIdentifier</key>
 			<string>ios-arm64</string>
 			<key>LibraryPath</key>
-			<string>libgodot-cpp.ios.template_debug.arm64.a</string>
+			<string>libgodot-cpp.ios.template_debug.universal.a</string>
 			<key>SupportedArchitectures</key>
 			<array>
 				<string>arm64</string>

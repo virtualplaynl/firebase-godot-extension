@@ -38,7 +38,8 @@ These steps assume you have Firebase set up with a project.
 
 ## Usage
 
-> [!WARNING] Incomplete documentation! This is a work in progress, don't use for production (unless you've worked more on this and tested, in that case please create a PR)
+> [!WARNING]
+> Incomplete documentation! This is a work in progress, don't use for production (unless you've worked more on this and tested, in that case please create a PR)
 
 Check out Example.gd (GDScript) or GodotFirebaseExample.cs (C#) for now.
 

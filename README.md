@@ -34,19 +34,17 @@ These steps assume you have Firebase set up with a project.
   - For macOS: into lib/macos/libgodotfirebase.macos.debug.framework
   - For others: (WIP)
 
-- Optional: Edit firebase.gdextension: remove from the [dependencies] section all the libraries you don't need
-
-- For iOS, edit Podfile: remove the pods you don't need
+- Optional (untested): Edit firebase.gdextension: remove from the [dependencies] section all the libraries you don't need
 
 ## Usage
+
+> [!WARNING] Incomplete documentation! This is a work in progress, don't use for production (unless you've worked more on this and tested, in that case please create a PR)
 
 Check out Example.gd (GDScript) or GodotFirebaseExample.cs (C#) for now.
 
 iOS, after exporting Xcode project:
-- Run pod install
-- Open xcworkspace, not the project directly
+- Add `https://github.com/firebase/firebase-ios-sdk` as a Package Dependency, removing all dependencies except FirebaseAnalytics, FirebaseAuth, FirebaseCrashlytics, FirebaseDatabase, FirebaseFirestore, FirebaseFunctions, FirebaseMessaging, FirebaseRemoteConfig and FirebaseStorage. Only enable the base packages, not the Swift or other variations.
 - Add GoogleServices-Info.plist to project
-- Set up any other settings, signing etc.
 
 ## Building
 

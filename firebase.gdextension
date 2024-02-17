@@ -1,0 +1,80 @@
+[configuration]
+
+entry_symbol = "firebase_library_init"
+compatibility_minimum = "4.2"
+
+[libraries]
+
+android.debug.x86_64 = "lib/android/libgodotfirebase.android.template_debug.x86_64.so"
+android.release.x86_64 = "lib/android/libgodotfirebase.android.template_release.x86_64.so"
+android.debug.arm64 = "lib/android/libgodotfirebase.android.template_debug.arm64.so"
+android.release.arm64 = "lib/android/libgodotfirebase.android.template_release.arm64.so"
+ios.debug = "lib/ios/libgodotfirebase.ios.template_debug.xcframework"
+ios.release = "lib/ios/libgodotfirebase.ios.template_release.xcframework"
+macos.debug = "lib/macos/libgodotfirebase.macos.template_debug.framework"
+macos.release = "lib/macos/libgodotfirebase.macos.template_release.framework"
+windows.x86_64.debug = "lib/win64/libgodotfirebase.windows.template_debug.x86_64.dll"
+
+[dependencies]
+macos.debug = {
+    "lib/macos/firebase.framework": "",
+    "lib/macos/firebase_analytics.framework": "",
+    "lib/macos/firebase_app_check.framework": "",
+    "lib/macos/firebase_auth.framework": "",
+    "lib/macos/firebase_database.framework": "",
+    "lib/macos/firebase_dynamic_links.framework": "",
+    "lib/macos/firebase_firestore.framework": "",
+    "lib/macos/firebase_functions.framework": "",
+    "lib/macos/firebase_gma.framework": "",
+    "lib/macos/firebase_installations.framework": "",
+    "lib/macos/firebase_messaging.framework": "",
+    "lib/macos/firebase_remote_config.framework": "",
+    "lib/macos/firebase_storage.framework": ""
+}
+windows.x86_64.debug = {
+    "lib/win64/Debug/firebase.lib": "",
+    "lib/win64/Debug/firebase_analytics.lib": "",
+    "lib/win64/Debug/firebase_app_check.lib": "",
+    "lib/win64/Debug/firebase_auth.lib": "",
+    "lib/win64/Debug/firebase_database.lib": "",
+    "lib/win64/Debug/firebase_dynamic_links.lib": "",
+    "lib/win64/Debug/firebase_firestore.lib": "",
+    "lib/win64/Debug/firebase_functions.lib": "",
+    "lib/win64/Debug/firebase_gma.lib": "",
+    "lib/win64/Debug/firebase_installations.lib": "",
+    "lib/win64/Debug/firebase_messaging.lib": "",
+    "lib/win64/Debug/firebase_remote_config.lib": "",
+    "lib/win64/Debug/firebase_storage.lib": ""
+}
+ios.debug = {
+    "lib/ios/libgodot-cpp.ios.template_debug.xcframework": "",
+    "lib/ios/firebase.xcframework": "",
+    "lib/ios/firebase_analytics.xcframework": "",
+    "lib/ios/firebase_app_check.xcframework": "",
+    "lib/ios/firebase_auth.xcframework": "",
+    "lib/ios/firebase_database.xcframework": "",
+    "lib/ios/firebase_dynamic_links.xcframework": "",
+    "lib/ios/firebase_firestore.xcframework": "",
+    "lib/ios/firebase_functions.xcframework": "",
+    "lib/ios/firebase_gma.xcframework": "",
+    "lib/ios/firebase_installations.xcframework": "",
+    "lib/ios/firebase_messaging.xcframework": "",
+    "lib/ios/firebase_remote_config.xcframework": "",
+    "lib/ios/firebase_storage.xcframework": ""
+}
+ios.release = {
+    "lib/ios/libgodot-cpp.ios.template_release.xcframework": "",
+    "lib/ios/firebase.xcframework": "",
+    "lib/ios/firebase_analytics.xcframework": "",
+    "lib/ios/firebase_app_check.xcframework": "",
+    "lib/ios/firebase_auth.xcframework": "",
+    "lib/ios/firebase_database.xcframework": "",
+    "lib/ios/firebase_dynamic_links.xcframework": "",
+    "lib/ios/firebase_firestore.xcframework": "",
+    "lib/ios/firebase_functions.xcframework": "",
+    "lib/ios/firebase_gma.xcframework": "",
+    "lib/ios/firebase_installations.xcframework": "",
+    "lib/ios/firebase_messaging.xcframework": "",
+    "lib/ios/firebase_remote_config.xcframework": "",
+    "lib/ios/firebase_storage.xcframework": ""
+}

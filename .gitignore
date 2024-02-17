@@ -1,0 +1,14 @@
+*.o
+*.os
+*.obj
+/lib/*
+/include/*
+.godot*
+*/Build/*
+.DS_Store
+.sconsign.dblite
+export_presets.cfg
+google-services.json
+google-services-desktop.json
+GoogleServices-Info.plist
+.vscode

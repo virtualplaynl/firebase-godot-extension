@@ -1,0 +1,33 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="GodotFirebase-Example"
+config/description="Example for GodotFirebase GDExtension."
+run/main_scene="res://Example-Dotnet.tscn"
+config/features=PackedStringArray("4.2", "C#", "GL Compatibility")
+config/icon="res://addons/firebase/Firebase.svg"
+
+[display]
+
+window/size/viewport_width=720
+window/size/viewport_height=1280
+
+[dotnet]
+
+project/assembly_name="GodotFirebase-Example"
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
+textures/vram_compression/import_etc2_astc=true
+limits/global_shader_variables/buffer_size=16384

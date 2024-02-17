@@ -1,0 +1,6 @@
+[submodule "godot-cpp"]
+	path = godot-cpp
+	url = https://github.com/godotengine/godot-cpp
+[submodule "example/addons/firebase"]
+	path = example/addons/firebase
+	url = https://github.com/virtualplaynl/firebase-godot-extension.git

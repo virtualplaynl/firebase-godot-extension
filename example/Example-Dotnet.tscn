@@ -1,0 +1,138 @@
+[gd_scene load_steps=12 format=3 uid="uid://clbfgcs51bxq2"]
+
+[ext_resource type="Script" path="res://GodotFirebaseExample.cs" id="1_rnt3h"]
+[ext_resource type="Texture2D" uid="uid://dyilmckec1yam" path="res://addons/firebase/Firebase.svg" id="2_6uaf7"]
+
+[sub_resource type="Theme" id="Theme_8nrff"]
+default_font_size = 20
+
+[sub_resource type="LabelSettings" id="LabelSettings_n8fky"]
+font_size = 28
+
+[sub_resource type="LabelSettings" id="LabelSettings_lqbnw"]
+font_size = 24
+
+[sub_resource type="SystemFont" id="SystemFont_ggw0o"]
+font_names = PackedStringArray("Open Sans")
+
+[sub_resource type="FontVariation" id="FontVariation_rennr"]
+base_font = SubResource("SystemFont_ggw0o")
+variation_embolden = -0.31
+
+[sub_resource type="LabelSettings" id="LabelSettings_7auyx"]
+font = SubResource("FontVariation_rennr")
+
+[sub_resource type="SystemFont" id="SystemFont_bcryf"]
+font_names = PackedStringArray("Open Sans")
+
+[sub_resource type="FontVariation" id="FontVariation_3dat3"]
+base_font = SubResource("SystemFont_bcryf")
+variation_embolden = -0.31
+
+[sub_resource type="LabelSettings" id="LabelSettings_ttyj1"]
+font = SubResource("FontVariation_3dat3")
+
+[node name="GodotFirebase" type="Control" node_paths=PackedStringArray("logLabel", "username", "password")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_8nrff")
+script = ExtResource("1_rnt3h")
+logLabel = NodePath("Example/ScrollContainer/Log")
+username = NodePath("Example/Header/VBoxContainer/HBoxContainer/Username")
+password = NodePath("Example/Header/VBoxContainer/HBoxContainer2/Password")
+
+[node name="Example" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 28
+alignment = 1
+
+[node name="Header" type="VBoxContainer" parent="Example"]
+layout_mode = 2
+
+[node name="Spacer" type="ReferenceRect" parent="Example/Header"]
+custom_minimum_size = Vector2(2.08165e-12, 30)
+layout_mode = 2
+border_width = 0.0
+
+[node name="Logo" type="TextureRect" parent="Example/Header"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("2_6uaf7")
+expand_mode = 5
+stretch_mode = 5
+
+[node name="Title" type="Label" parent="Example/Header"]
+layout_mode = 2
+text = "GodotFirebase example"
+label_settings = SubResource("LabelSettings_n8fky")
+horizontal_alignment = 1
+
+[node name="Subtitle" type="Label" parent="Example/Header"]
+layout_mode = 2
+text = "GDExtension version, with Dotnet"
+label_settings = SubResource("LabelSettings_lqbnw")
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Example/Header"]
+custom_minimum_size = Vector2(400, 2.08165e-12)
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Example/Header/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Example/Header/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(100, 2.08165e-12)
+layout_mode = 2
+text = "Username:"
+label_settings = SubResource("LabelSettings_7auyx")
+horizontal_alignment = 2
+
+[node name="Username" type="LineEdit" parent="Example/Header/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Example/Header/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Example/Header/VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(100, 2.08165e-12)
+layout_mode = 2
+text = "Password:"
+label_settings = SubResource("LabelSettings_7auyx")
+horizontal_alignment = 2
+
+[node name="Password" type="LineEdit" parent="Example/Header/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+secret = true
+
+[node name="Button" type="Button" parent="Example/Header/VBoxContainer"]
+layout_mode = 2
+text = "Sign in"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Example"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Log" type="Label" parent="Example/ScrollContainer"]
+custom_minimum_size = Vector2(2.08165e-12, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "GDExtension version"
+label_settings = SubResource("LabelSettings_ttyj1")
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[connection signal="pressed" from="Example/Header/VBoxContainer/Button" to="." method="OnLoginPressed"]

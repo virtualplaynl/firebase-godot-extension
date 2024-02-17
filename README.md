@@ -49,7 +49,4 @@ iOS, after exporting Xcode project:
 
 ## Building
 
-- Checkout the [source](../../tree/source) branch
-
-- Put SDK libraries in lib/[platform]
-- Put SDK includes in include/
+- Checkout the [source](../../tree/source) branch, use instructions there.

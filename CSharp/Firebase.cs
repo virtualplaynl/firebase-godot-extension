@@ -26,6 +26,7 @@ public enum Operation : int
 public static class Firebase
 {
     private static readonly GodotObject Singleton = Engine.HasSingleton("Firebase") ? Engine.GetSingleton("Firebase") : null;
+    // TODO: Cache StringNames
     public static void Init() => Singleton.Call("init");
     public static void InitWith(string configJson) => Singleton.Call("init_with", configJson);
 
